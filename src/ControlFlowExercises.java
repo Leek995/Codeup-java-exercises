@@ -6,5 +6,11 @@ public class ControlFlowExercises {
             System.out.printf("%d ", i);
             ++i;
         }
+        int a = 0;
+
+        do{
+            a += 2;
+            System.out.printf("the current iteration of a is... %d.%n", a);
+        }while (a < 100);
     }
 }
