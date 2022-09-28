@@ -8,6 +8,13 @@ public class ConsoleExercises {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter a number: ");
         int userNumber = scanner.nextInt();
-        System.out.print(userNumber);
+        System.out.println(userNumber);
+
+        System.out.println("Enter three (3) words: ");
+        String first_word, second_word, third_word;
+        first_word = scanner.next();
+        second_word = scanner.next();
+        third_word = scanner.next();
+        System.out.printf( "%s%n%s%n%s%n", first_word, second_word, third_word);
     }
 }
