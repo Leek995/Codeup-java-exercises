@@ -1,33 +1,94 @@
+import java.util.Scanner;
 public class ControlFlowExercises {
-    public static void main(String[] args){
-        int i = 5;
-        while (i <= 15){
-//            System.out.printf("The current iteration of i is: %d%n", i);
-            System.out.printf("%d ", i);
-            ++i;
+    public static void main(String[] args) {
+        int loopNum = 5;
+        while(loopNum <= 15) {
+            System.out.print(loopNum + " ");
+            loopNum++;
         }
-        int a = 0;
 
-        do{
-            a += 2;
-            System.out.printf("the current iteration of a is... %d.%n", a);
-        }while (a < 100);
+        loopNum = 0;
 
-        int x = 0;
-        while (x < 100){
-            ++x;
-            if(x % 3 == 0 ){
-                if (x % 5 == 0){
-                    System.out.println("FizzBuzz");
-                    continue;
-                }
-                System.out.println("Fizz");
-                continue;
-            }else if(x % 5 == 0){
+        do {
+            System.out.println(loopNum);
+            loopNum += 2;
+        } while (loopNum <= 100);
+
+        loopNum = 100;
+
+        do {
+            System.out.println(loopNum);
+            loopNum -= 5;
+        } while (loopNum >= -10);
+
+        long longNum = 2;
+        do {
+            System.out.println(longNum);
+            longNum *= longNum;
+        } while (longNum < 1000000);
+
+        for (long i = 2; i < 1000000; i*=i) {
+            System.out.println(i);
+        }
+
+        for (int num = 1; num <=100; num++) {
+            if (num % 15 == 0) {
+                System.out.println("FizzBuzz");
+            } else if (num % 5 == 0) {
                 System.out.println("Buzz");
-                continue;
+            } else if (num % 3 == 0) {
+                System.out.println("Fizz");
+            } else {
+                System.out.println(num);
             }
-            System.out.printf("%d%n", x);
         }
+
+        boolean keepGoing;
+        Scanner scanner = new Scanner(System.in);
+        do {
+            System.out.println("Enter a number:");
+            int userNum = scanner.nextInt();
+
+            System.out.println("Number | Squared | Cubed");
+            System.out.println("------------------------");
+            for (int i = 1; i <= userNum; i++) {
+                System.out.printf("%d | %d | %d%n", i, i * i, i * i * i);
+            }
+            scanner.nextLine();
+            System.out.println("Would you like to do yet more math?");
+            String userAnswer = scanner.nextLine();
+
+            if (userAnswer.equalsIgnoreCase("yes")) {
+                keepGoing = true;
+            } else {
+                keepGoing = false;
+            }
+        }  while (keepGoing);
+
+        do {
+            System.out.println("Enter a number:");
+            int userNum = scanner.nextInt();
+
+            if (userNum >= 88 && userNum <=100) {
+                System.out.println("You got an A!");
+            } else if (userNum <= 87 && userNum >= 80) {
+                System.out.println("You got a B!");
+            } else if (userNum <= 79 && userNum >= 67) {
+                System.out.println("You got a C!");
+            } else if (userNum <= 66 && userNum >= 60) {
+                System.out.println("You got a D!");
+            } else {
+                System.out.println("You got an F!");
+            }
+
+            scanner.nextLine();
+            System.out.println("Would you like to look at more grades?");
+            String userAnswer = scanner.nextLine();
+            if (userAnswer.equalsIgnoreCase("yes")) {
+                keepGoing = true;
+            } else {
+                keepGoing = false;
+            }
+        } while (keepGoing == true);
     }
 }
