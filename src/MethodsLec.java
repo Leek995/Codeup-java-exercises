@@ -23,9 +23,6 @@ public class MethodsLec {
 //        int num2 = 2;
 //        return num1 + num2;
 //    }
-    public static int add(int num1, int num2){
-        return num1 + num2;
-    }
 
     public static String getPassword(){
         return "Password";
@@ -45,7 +42,38 @@ public class MethodsLec {
         System.out.printf("% x %i",number_1, number_2);
         return results;
     }
+//    public static void sayHello(int times){
+//        for(int i = 0; i < times; i+=1){
+//            sayHello();
+//        }
+//    }
+    public static int add() {
+        return add(45, 6);
+    }
+
+
+    //    public static void sayHello(int times){
+//        for(int i = 0; i < times; i+=1){
+//            sayHello();
+//        }
+//    }
+    public static int add(int num1, int num2){
+        return num1 + num2;
+    }
+    public static int add(double num1, double num2){
+        return (int)(num1 + num2);
+    }
 //    public static String food(String apple, String orange){
 //
 //    }
+    public static void recursion(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Do you want to continue? [y/n] " );
+        String choice = scanner.nextLine();
+        if (choice.equalsIgnoreCase("y")){
+            recursion();
+        }else  if(choice.equalsIgnoreCase("n")) {
+            System.exit(0);
+        }
+    }
 }
