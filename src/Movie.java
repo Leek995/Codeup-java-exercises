@@ -9,7 +9,6 @@ class Movie {
         System.out.println("Playing the movie");
     }
 }
-
 class MovieTestDrive{
     public static void main(String [] args){
         Movie one = new Movie();
