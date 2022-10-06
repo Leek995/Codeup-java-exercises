@@ -14,18 +14,19 @@ class Shapes {
 
     public static void main(String[] args){
         Shapes Rectangle = new Shapes(3,5);
-        System.out.println(Rectangle.getArea());
     }
 
-    class Square extends Rectangle{
+    class Square extends Rectangle {
         int side;
-        public Square(int length, int width, int side){
-            super(width,length);
+
+        public Square(int length, int width, int side) {
+            super(width, length);
             this.side = side;
         }
 
-    }public int getArea(){
-        this.side = this.length + width;
+//    }public int getArea(){
+//        this.side = this.length + width;
+//    }
     }
 
 }
