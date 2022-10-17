@@ -3,13 +3,16 @@ package Grades;
 import java.util.ArrayList;
 
 public class Student {
-    String name;
-    ArrayList<Integer> grades = new ArrayList<>();
-    int grade;
+    private String name;
 
-    Student(String name, int grade){
-        this.grade = grade;
-        grades.add(grade);
+    public ArrayList<Integer> getGrades() {
+        return grades;
+    }
+
+    private ArrayList<Integer> grades = new ArrayList<>();
+
+
+    Student(String name){
         this.name = name;
 
     }
