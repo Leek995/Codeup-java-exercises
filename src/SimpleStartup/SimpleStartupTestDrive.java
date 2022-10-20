@@ -2,6 +2,7 @@ package SimpleStartup;
 
 public class SimpleStartupTestDrive {
     public static void main(String[] args) {
+
         SimpleStartup dot = new SimpleStartup();
 
         int[] locations = {1, 2, 3};
