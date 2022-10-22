@@ -1,25 +1,25 @@
-package Grades;
-
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
-import java.util.Map.Entry;
-
-
-public class GradesApp2 {
-
-    public static void moreGrades(Scanner scanner, Student student) {
-        System.out.println("Do you want to enter a grade? y/n:");
-        String choice = scanner.nextLine();
-        do {
-            System.out.println("Enter grade:");
-            int grade = scanner.nextInt();
-            student.addGrade(grade);
-            System.out.println("Would you like to add another grade? ");
-            choice = scanner.nextLine();
-            moreGrades(scanner, student);
-        } while (choice.equalsIgnoreCase("y"));
-    }
+//package Grades;
+//
+//import java.util.HashMap;
+//import java.util.Map;
+//import java.util.Scanner;
+//import java.util.Map.Entry;
+//
+//
+//public class GradesApp2 {
+//
+//    public static void moreGrades(Scanner scanner, Student student) {
+//        System.out.println("Do you want to enter a grade? y/n:");
+//        String choice = scanner.nextLine();
+//        do {
+//            System.out.println("Enter grade:");
+//            int grade = scanner.nextInt();
+//            student.addGrade(grade);
+//            System.out.println("Would you like to add another grade? ");
+//            choice = scanner.nextLine();
+//            moreGrades(scanner, student);
+//        } while (choice.equalsIgnoreCase("y"));
+//    }
 
 
 //    public static void main(String[] args) {
@@ -86,6 +86,6 @@ public class GradesApp2 {
 //        }
 //
 //        }
-
-    }
-}
+//
+//    }
+//}
