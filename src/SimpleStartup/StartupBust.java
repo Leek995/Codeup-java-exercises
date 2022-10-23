@@ -27,6 +27,14 @@ public class StartupBust {
             startup.setLocationCells(newLocation);
         }
     }
+
+    private void startPlaying(){
+        while (!startups.isEmpty()){
+            String userGuess = helper.getUserInput("Enter a guess");
+            checkUserGuess(userGuess);
+        }
+        finishGame();
+    }
 }
 
 
